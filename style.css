@@ -64,7 +64,10 @@ nav {
 }
 
 .intro {
-    background: linear-gradient(315deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    background-image: url(images/bg-pattern-intro-mobile.svg), linear-gradient(315deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -330px -250px, center;
     color: white;
     border-radius: 0px 0px 0px 90px;
 }
@@ -105,13 +108,22 @@ h2 {
     margin: 8px 8px;
     margin-top: 30px;
     margin-bottom: 5px;
-    outline: white solid 2px;
-    outline-offset: -1px;
+
+    /* outline: white solid 2px;
+    outline-offset: -1px; */
+
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    -khtml-border-radius: 500px;
+
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
+    
 }
 
 #startButton:hover {
     background-color: rgba(255, 255, 255, 0.185);
-    outline-color: rgba(255, 255, 255, 0.185);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.185);
     color: white;
     mix-blend-mode: normal;
     outline-offset: 0;
@@ -212,4 +224,8 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-bottom: -230px;
+}
+
+#laptopImg{
+    width: 140vw;
 }
