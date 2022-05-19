@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
     --lightRed: hsl(356, 100%, 66%);
@@ -36,6 +36,8 @@ body{
 
 a {
     display: none;
+    text-decoration: none;
+    color: white;
 }
 
 .dropdown, .auth{
@@ -228,4 +230,42 @@ p {
 
 #laptopImg{
     width: 140vw;
+}
+
+
+
+
+/* footer */
+
+
+
+
+
+footer {
+    background-color: var(--veryDarkBlackBlue);
+    color: white;
+    padding: 60px;
+    display: grid;
+    justify-content: center;
+}
+
+h5 {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    text-align: center;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    color: var(--grayishBlue);
+    font-size: 18;
+    padding: 4px;
+}
+
+#logoFooter {
+   margin: auto;
 }
