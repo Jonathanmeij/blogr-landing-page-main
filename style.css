@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
@@ -29,7 +29,7 @@ body{
 
 
 
-/* header */
+/* nav */
 
 
 
@@ -51,19 +51,141 @@ nav {
     padding: 7.5%;
     padding-top: 50px;
     padding-bottom: 0;
+    width: 85%;
 }
 
-#hamburger {
-    height: 20px;
+.hamburgerContainer{
+    position: relative;
+    max-height: 25px;
 }
 
-#hamburgerClose {
+.hamburger {
+    
+    cursor: pointer;
+}
+
+.hidden {
     display: none;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+}
+
+.dropdownButton {
+    background: none;
+	color: black;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--veryDarkBlue);
+    padding: 15px;
+
+    width: 100%;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    background-color: white;
+    max-width: 400px;
+    max-height: fit-content;
+    width: 85%;
+    box-shadow: 0px 10px 20px 2px #00000031;
+    border-radius: 8px;
+    padding: 30px 0px;
+    z-index: 1;
+    
+    transform: translate(-50%, 0%);
+}
+
+.showA a{
+    display: block;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color: hsl(207, 32%, 36%);
+    padding: 8px;
+}
+
+.links {
+    display: none;
+}
+
+.showA{
+    display: block;
+    background-color: hsl(207, 23%, 92%);
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    border-radius: 8px;
+}
+.show {
+    display: block;
+}
+
+.show .auth{
+    display: block;
 }
 
 #logo {
     height: 30px;
 }
+
+.seperator {
+    width: 90%;
+    border: none;
+    border-top: 1px solid rgb(214, 214, 214);
+}
+
+.pillButton {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: none;
+    background: none;
+    color: var(--veryDarkBlue);
+    border-style: none;
+    border-radius: 500px;
+    padding: 12px 0px;
+    width: 130px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 5px;
+
+    /* outline: white solid 2px;
+    outline-offset: -1px; */
+
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    -khtml-border-radius: 500px;
+
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
+}
+
+.auth {
+    margin-top: 10px;
+}
+
+#signUp{
+    background: linear-gradient(315deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    color: white;
+}
+
+
+/* header */
+
+
+
 
 .intro {
     background-image: url(images/bg-pattern-intro-mobile.svg), linear-gradient(315deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
@@ -71,7 +193,7 @@ nav {
     background-attachment: fixed;
     background-position: -330px -250px, center;
     color: white;
-    border-radius: 0px 0px 0px 90px;
+    border-radius: 0px 0px 0px 100px;
 }
 
 header {
@@ -96,31 +218,15 @@ h2 {
     margin: 15px;
 }
 
-.headerButton {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1em;
-    font-weight: 500;
+.headerButton{
+    margin: 8px 8px;
+}
+
+#startButton {
     background-color: white;
     color: black;
     mix-blend-mode: lighten;
-    border-style: none;
-    border-radius: 500px;
-    padding: 12px 0px;
-    width: 130px;
-    margin: 8px 8px;
-    margin-top: 30px;
-    margin-bottom: 5px;
-
-    /* outline: white solid 2px;
-    outline-offset: -1px; */
-
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    border-radius: 500px;
-    -khtml-border-radius: 500px;
-
-    box-shadow: 0 0 0 1px rgb(255, 255, 255);
-    
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.185);
 }
 
 #startButton:hover {
@@ -149,7 +255,7 @@ h2 {
     h1 span {
         display: block;
     }
-  }
+}
 
 
 
@@ -247,6 +353,7 @@ footer {
     padding: 60px;
     display: grid;
     justify-content: center;
+    border-radius: 0 100px 0 0;
 }
 
 h5 {
@@ -268,4 +375,79 @@ footer a {
 
 #logoFooter {
    margin: auto;
+}
+
+
+/* responsive maken van alles */
+
+
+
+@media screen and (min-width: 870px) {
+    .hamburger {
+        display: none;
+    }
+
+    .auth {
+        display: block;
+        margin: 8px;
+        box-shadow: initial;
+        color: white;
+    }
+
+    #signUp{
+        background-color: white;
+    }
+
+
+
+    .dropdownButton button{
+        display: block;
+        position: initial;
+    }
+
+
+    .dropdownContent{
+        position: initial;
+        top: initial;
+        left: initial;
+        max-width: none;
+        height: none;
+        border-radius: 0;
+        padding: initial;
+        z-index: initial;
+        background: none;
+        box-shadow: none;
+        transform: initial;
+        margin: 0 20px;
+
+        display:flex;
+        justify-content: space-between;
+        width: 98%;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+    .linksContainer {
+        display: flex;
+        font-size: 1rem;
+    }
+
+    .authContainer {
+        display: flex;
+    }
+
+    .dropdownButton {
+        width: inherit;
+        font-size: 1rem;
+        color: white;
+        font-weight: 300;
+        margin: 0px 10px;
+    }
+
+
+    #dropdown{
+        width: 100%;
+    }
 }

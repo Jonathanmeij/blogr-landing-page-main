@@ -20,40 +20,60 @@
     <nav>
       <img id="logo" src="images/logo.svg" alt="">
       
-      <button class="dropdown">Product</button>
-      <div id="productDropDown">
-        <a href="#">Overview</a>
-        <a href="#">Pricing</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Features</a>
-        <a href="#">Integrations</a>
+      <div id="dropdown" >
+        <div class="hamburgerContainer">
+          <img class="hamburger" src="images/icon-hamburger.svg" alt="">
+          <img class="hamburger hidden" id="hamburgerClose" src="images/icon-close.svg" alt="">
+        </div>
+        <div class="dropdownContent">
+          
+          <div class="linksContainer">
+            <button class="dropdownButton product">Product</button>
+            <div class="links product">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
+          
+            <button class="dropdownButton company">Company</button>
+            <div class="links company">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+            </div>
+          
+            <button class="dropdownButton connect">Connect</button>
+            <div class="links connect">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+  
+          </div>
+
+          <hr class="seperator">
+          
+          <div class="authContainer">
+            <button class="pillButton auth" id="loging">Login</button>
+            <button class="pillButton auth" id="signUp">Sign Up</button>
+          </div>
+          
+      
+          
+        </div>
+        
       </div>
-    
-      <button class="dropdown">Company</button>
-      <div id="companyDropDown">
-        <a href="#">About</a>
-        <a href="#">Team</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
-      </div>
-    
-      <button class="dropdown">Connect</button>
-      <div id="connecttDropDown">
-        <a href="#">Contact</a>
-        <a href="#">Newsletter</a>
-        <a href="#">LinkedIn</a>
-      </div>
-      <button class="auth">Login</button>
-      <button class="auth">Sign Up</button>
-      <img id="hamburger" src="images/icon-hamburger.svg" alt="">
-      <img id="hamburgerClose" src="images/icon-close.svg" alt="">
+
     </nav>
     <header>
       <h1><span>A modern </span><span>publishing platform</span></h1>
       <h2>Grow your audience and build your online brand</h2>
   
-      <button class="headerButton" id="startButton">Start for Free</button>
-      <button class="headerButton" id="learnMoreButton">Learn More</button>
+      <button class="pillButton headerButton" id="startButton">Start for Free</button>
+      <button class="pillButton headerButton" id="learnMoreButton">Learn More</button>
     </header>
   </div>
   
@@ -130,5 +150,6 @@
     <a href="#">Newsletter</a>
     <a href="#">LinkedIn</a>
   </footer>
+  <script src="main.js"></script>
 </body>
 </html>
